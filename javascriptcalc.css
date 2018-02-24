@@ -1,13 +1,15 @@
 body {
     padding-top: 60px;
     font-family: 'Raleway', sans-serif;
+    background-color: khaki;
 }
 
 #calcCase {
-    max-width: 500px;
-    margin:auto;
+    width:  325px;
+    height: 306.6px;
+    margin: auto;
     background-color: #626D75;
-    box-shadow: 2px 2px grey;
+    box-shadow: 2px 2px black;
 }
 
 #calcBrand {
@@ -30,13 +32,61 @@ body {
     font-size: 24px;
 }
 
-#calcButtons{
+#calcButtonsMains{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-around;
-    align-content: space-around;
+    justify-content: flex-start;
+    
+    height: 240px; /* Need to set this or it won't wrap columns */
     padding-bottom: 10px;
     padding-top: 10px;
+
     font-family: "Cousine", monospace;
+}
+
+#calcButtonsSide{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    
+    height: 240px; /* Need to set this or it won't wrap columns */
+    padding-bottom: 10px;
+    padding-top: 10px;
+
+    font-family: "Cousine", monospace;
+}
+
+
+.btnCalc {
+    margin-top: 10px;
+    margin-right: 10px;
+    width: 60px;
+    box-shadow: 2px 2px black;
+}
+
+#btnOne {
+    height: 34px;
+}
+#btnTwo {
+    height: 34px;
+}
+#btnThree {
+    height: 34px;
+}
+
+#btnZero {
+    width: 130px;
+    height: 34px;
+}
+
+#btnDot {
+    height: 34px;
+}
+
+#btnEquals {
+    color: black; 
+    background-color: lightgreen;
+    height: 78px;
 }
