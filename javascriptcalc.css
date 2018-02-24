@@ -1,0 +1,16 @@
+body {
+    padding-top: 60px;
+}
+
+#calcCase {
+    width: 40%;
+    margin: 30%;
+    background-color: red;
+}
+
+#calcButtons{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
