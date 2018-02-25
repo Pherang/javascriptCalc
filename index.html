@@ -5,53 +5,49 @@
     <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Cousine|VT323" rel="stylesheet">
     <link rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap.css">
-    <link rel="stylesheet" href="flexboxgrid-master/dist/flexboxgrid.css">
+    <link rel="stylesheet" href="flexboxgrid-6.3.1/dist/flexboxgrid.css">
     <link rel="stylesheet" href="javascriptcalc.css">
-    <script src="bootstrap-3.3.7-dist/js/boostrap.js"></script>
     <script src="jquery-3.2.1.js"></script>
+    <script src="bootstrap-3.3.7-dist/js/bootstrap.js"></script>
+    
 </head>
 
 <body>  
     <div id="calcCase" class="container">
         <div id="calcBrand">Pherang's Calculator</div>
-        <div id="calcAnswer">8*8*9*10*11</div>
+        <div id="calcAnswer"></div>
         <div id="calcButtonsMain">
             <div id="calcButtonsLeft">
-                <button id="btnZero" class="btn btnCalc">0</button>
                 
-                <button class="btn btnCalc">7</button>
-                <button class="btn btnCalc">4</button>
+                <button id="btnClear" class="btn btnCalc btn-danger">AC</button>
+                <button id="btn Backspace" class="btn btnCalc btn-warning">CE</button>
+                <button id="btnDivide" class="btn btnCalc">&divide;</button>
+                
+                <button id="btnSeven" class="btn btnCalc">7</button>
+                <button id="btnEight" class="btn btnCalc">8</button>
+                <button id="btnNine" class="btn btnCalc">9</button>
+                
+                <button id="btnFour" class="btn btnCalc">4</button>
+                <button id="btnFive" class="btn btnCalc">5</button>
+                <button id="btnSix" class="btn btnCalc">6</button>
                 
                 <button id="btnOne" class="btn btnCalc">1</button>
-                <button class="btn btnCalc btn-danger">AC</button>
-                <button class="btn btnCalc btn-warning">CE</button>
-                <button class="btn btnCalc">/</button>
-                <button class="btn btnCalc">X</button>
-                
-                <button class="btn btnCalc">8</button>
-                <button class="btn btnCalc">9</button>
-
-                
-                <button class="btn btnCalc">5</button>
-                <button class="btn btnCalc">6</button>
-                
-                
                 <button id="btnTwo" class="btn btnCalc">2</button>
                 <button id="btnThree" class="btn btnCalc">3</button>
                 
-                
+                <button id="btnZero" class="btn btnCalc">0</button>
                 <button id="btnDot" class="btn btnCalc">.</button>
-
-                
             </div>
             <div id="calcButtonsRight">
-                
-                <button class="btn btnCalc">+</button>
-                <button class="btn btnCalc">-</button>
-                <button id="btnEquals" class="btn btnCalc">=</button>
+                <button id="btnMultiply" class="btn btnCalc">&times;</button>
+                <button id="btnAdd" class="btn btnCalc">&plus;</button>
+                <button id="btnSubtract" class="btn btnCalc">&minus;</button>
+                <button id="btnEquals" class="btn btnCalc">&equals;</button>
             </div>
         </div> <!-- calcButtonsMain end -->
     </div>
+
+<script src="javascriptcalc.js"></script>
 </body>
 
 </html>

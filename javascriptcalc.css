@@ -5,9 +5,11 @@ body {
 }
 
 #calcCase {
-    width:  325px;
-    height: 306.6px;
+    width:  320px;
+    height: 323.6px;
     margin: auto;
+    padding-top:8px;
+    padding-bottom: 5px;
     background-color: #626D75;
     box-shadow: 2px 2px black;
 }
@@ -18,21 +20,29 @@ body {
     margin-bottom: 2px;
     padding-top: 3px;
     padding-bottom: 3px;
+    font-size: 20px;
     background-color: lightgray;
 }
 
 #calcAnswer {
-    text-align: right;
+    height: 33.6px;
     padding-bottom: 0px;
     padding-top: 0px;
     padding-right: 25px;
+    
     background-color: skyblue;
     box-shadow: -2px -2px darkgreen;
+    
+    text-align: right;
     font-family: "VT323", monospace;
     font-size: 24px;
 }
 
-#calcButtonsMains{
+#calcButtonsMain{
+    display: flex;
+    flex-direction: row;
+}
+#calcButtonsLeft{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -41,11 +51,11 @@ body {
     height: 240px; /* Need to set this or it won't wrap columns */
     padding-bottom: 10px;
     padding-top: 10px;
-
+    padding-right: 0px;
     font-family: "Cousine", monospace;
 }
 
-#calcButtonsSide{
+#calcButtonsRight{
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -87,6 +97,6 @@ body {
 
 #btnEquals {
     color: black; 
-    background-color: lightgreen;
+    background-color: limegreen;
     height: 78px;
 }

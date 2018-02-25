@@ -1,17 +1,33 @@
 
-var firstNum = "";
-var secondNum = "";
+var aNumber = "";
 var operator = "";
-
+var equation = [];
+var answerBox = document.getElementById("calcAnswer");
 
 function storeNum(number){
-    firstNum += number;
-    console.log(firstNum);
+    aNumber += number;
+    answerBox.textContent = aNumber;
 }
 
-function equals(){
-    console.log(firstNum);
-    return firstNum;
+function equalResult(){
+    console.log("Equals time!");
+    console.log(aNumber);
+    equation.push(aNumber);
+    aNumber = "";
+    var result = eval(equation[0] + equation[1] + equation[2]);
+    answerBox.textContent = result;
+    console.log(result);
+    return result;
+}
+
+function operation(mathoper){
+    equation.push(aNumber);
+    aNumber = "";
+    console.log(equation[0]);
+    if (equation[0]){
+        equation.push(mathoper);
+    }
+    console.log(equation[1]);
 }
 
 /* Setup Event Handlers for all the number buttons on the calculator */
@@ -25,13 +41,13 @@ var numTwo = document.getElementById("btnTwo");
 numTwo.addEventListener("click", function(){storeNum(2);} );
 
 var numThree = document.getElementById("btnThree");
-numThree.addEventListener("click", storeNum);
+numThree.addEventListener("click", function(){storeNum(3);} );
 
 var numFour = document.getElementById("btnFour");
-numFour.addEventListener("click", storeNum);
+numFour.addEventListener("click", function(){storeNum(4);} );
 
 var numFive = document.getElementById("btnFive");
-numFive.addEventListener("click", storeNum);
+numFive.addEventListener("click", function(){storeNum(5);} );
 
 var numSix = document.getElementById("btnSix");
 numSix.addEventListener("click", storeNum);
@@ -46,5 +62,19 @@ var numNine = document.getElementById("btnNine");
 numNine.addEventListener("click", storeNum);
 
 /* Setup Event Handlers for all the operation buttons on the calculator */
-var numZero = document.getElementById("btnEquals");
-numZero.addEventListener("click", equals);
+var equals = document.getElementById("btnEquals");
+equals.addEventListener("click", equalResult);
+
+var add = document.getElementById("btnAdd");
+add.addEventListener("click", function(){ operation("+");});
+
+var subtract = document.getElementById("btnSubtract");
+subtract.addEventListener("click", function(){ operation("-");});
+
+var multiply = document.getElementById("btnMultiply");
+multiply.addEventListener("click", function(){ operation("*");});
+
+var divide = document.getElementById("btnDivide");
+divide.addEventListener("click", function(){ operation("/");});
+
+
