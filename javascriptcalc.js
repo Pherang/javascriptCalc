@@ -10,6 +10,9 @@ function storeNum(number){
         equation = [];
         aNumber = "";
     }
+    if (aNumber.indexOf(".") > 0 && number == "."){
+        number="";
+    }
     aNumber += number;
     answerBox.textContent = aNumber;
 }
@@ -45,6 +48,9 @@ function clearMem(){
 }
 
 /* Setup Event Handlers for all the number buttons on the calculator */
+var dot = document.getElementById("btnDot");
+dot.addEventListener("click", function(){storeNum(".");} );
+
 var numZero = document.getElementById("btnZero");
 numZero.addEventListener("click", function(){storeNum(0);} );
 
