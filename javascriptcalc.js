@@ -34,8 +34,8 @@ function equalResult(){
 }
 // Add arithimetic operator to equation.
 function operation(mathoper){
-    // If the minus sign was pushed and there was no number pushed store the minus sign to make the number negative.
-    if(aNumber == "" && mathoper == "-" && !equation[equation.length-1]){
+    // If the minus button was pushed and there is no number currently and no number to be subtracted from then the user is inputting a negative number.
+    if(aNumber == "" && mathoper == "-" && !Number.isNaN(equation[equation.length-1])){
         aNumber = mathoper;
     }else {
         if ( isFinite(Number.parseInt(aNumber)) || isFinite(Number.parseFloat(aNumber))){
@@ -43,7 +43,7 @@ function operation(mathoper){
             aNumber = "";
         }
     }
-    // if there was a number before an arithmetic operator button was pushed put that number into the equation.
+    // if there is a number to be operated on then add the operation.
     if (equation[0]){
         equation.push(mathoper);
     }
