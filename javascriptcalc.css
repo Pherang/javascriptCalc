@@ -6,7 +6,7 @@ body {
 
 #calcCase {
     width:  320px;
-    height: 323.6px;
+    height: 380.6px;
     margin: auto;
     padding-top:8px;
     padding-bottom: 5px;
@@ -38,9 +38,23 @@ body {
     font-size: 24px;
 }
 
+#calcEquation {
+    height: 22px;
+    padding-bottom: 0px;
+    padding-top: 0px;
+    padding-right: 25px;
+    
+    background-color: skyblue;
+    color: grey;
+    text-align: right;
+    font-family: "VT323", monospace;
+    font-size: 16px;
+}
+
 #calcButtonsMain{
     display: flex;
     flex-direction: row;
+    margin-top: 10px;
 }
 #calcButtonsLeft{
     display: flex;
