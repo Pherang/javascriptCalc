@@ -10,6 +10,7 @@ function storeNum(number){
         equation = [];
         aNumber = "";
     }
+    // If the number doesn't already contain a decimal place then add a decimal.
     if (aNumber.indexOf(".") > 0 && number == "."){
         number="";
     }
@@ -20,10 +21,10 @@ function storeNum(number){
 function equalResult(){
     equation.push(aNumber);
     aNumber = "";
+    console.log(equation);
     var result = eval(equation.join(""));
     equation = [];
     equation.push(result);
-    //console.log("Array should have one entry now " + equation);
     if (Number.isNaN(result)){
         result = "Error";    
     }
@@ -33,8 +34,16 @@ function equalResult(){
 }
 // Add arithimetic operator to equation.
 function operation(mathoper){
-    equation.push(aNumber);
-    aNumber = "";
+    // If the minus sign was pushed and there was no number pushed store the minus sign to make the number negative.
+    if(aNumber == "" && mathoper == "-" && !equation[equation.length-1]){
+        aNumber = mathoper;
+    }else {
+        if ( isFinite(Number.parseInt(aNumber)) || isFinite(Number.parseFloat(aNumber))){
+            equation.push(aNumber);
+            aNumber = "";
+        }
+    }
+    // if there was a number before an arithmetic operator button was pushed put that number into the equation.
     if (equation[0]){
         equation.push(mathoper);
     }
