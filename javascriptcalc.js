@@ -10,7 +10,7 @@ function storeNum(number){
 }
 
 function equalResult(){
-    console.log("Equals time!");
+    console.log("Equation time!");
     console.log(aNumber);
     equation.push(aNumber);
     aNumber = "";
@@ -50,16 +50,16 @@ var numFive = document.getElementById("btnFive");
 numFive.addEventListener("click", function(){storeNum(5);} );
 
 var numSix = document.getElementById("btnSix");
-numSix.addEventListener("click", storeNum);
+numSix.addEventListener("click", function(){storeNum(6);} );
 
 var numSeven = document.getElementById("btnSeven");
-numSeven.addEventListener("click", storeNum);
+numSeven.addEventListener("click", function(){storeNum(7);} );
 
 var numEight = document.getElementById("btnEight");
-numEight.addEventListener("click", storeNum);
+numEight.addEventListener("click", function(){storeNum(8);} );
 
 var numNine = document.getElementById("btnNine");
-numNine.addEventListener("click", storeNum);
+numNine.addEventListener("click", function(){storeNum(9);} );
 
 /* Setup Event Handlers for all the operation buttons on the calculator */
 var equals = document.getElementById("btnEquals");
