@@ -1,10 +1,15 @@
-
 var aNumber = "";
 var operator = "";
 var equation = [];
 var answerBox = document.getElementById("calcAnswer");
 
 function storeNum(number){
+        
+    if (Number.isInteger(test)) {
+        console.log("already a num");
+        equation = [];
+        aNumber = "";
+    }
     aNumber += number;
     answerBox.textContent = aNumber;
 }
@@ -14,7 +19,10 @@ function equalResult(){
     console.log(aNumber);
     equation.push(aNumber);
     aNumber = "";
-    var result = eval(equation[0] + equation[1] + equation[2]);
+    var result = eval(equation.join(""));
+    if (Number.isNaN(result)){
+        result = "Error";    
+    }
     answerBox.textContent = result;
     console.log(result);
     return result;
@@ -23,11 +31,17 @@ function equalResult(){
 function operation(mathoper){
     equation.push(aNumber);
     aNumber = "";
-    console.log(equation[0]);
     if (equation[0]){
         equation.push(mathoper);
     }
-    console.log(equation[1]);
+    
+}
+
+function clearMem(){
+    aNumber = "";
+    operator = "";
+    equation = [];
+    answerBox.textContent = "";
 }
 
 /* Setup Event Handlers for all the number buttons on the calculator */
@@ -77,4 +91,5 @@ multiply.addEventListener("click", function(){ operation("*");});
 var divide = document.getElementById("btnDivide");
 divide.addEventListener("click", function(){ operation("/");});
 
-
+var clearAll = document.getElementById("btnClear");
+clearAll.addEventListener("click", clearMem);
