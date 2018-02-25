@@ -2,10 +2,10 @@ var aNumber = "";
 var operator = "";
 var equation = [];
 var answerBox = document.getElementById("calcAnswer");
-
+// Process and store number to be added to equation.
 function storeNum(number){
-        
-    if (Number.isInteger(test)) {
+    // Check if the result of an equation was obtained and stored. If it was start with a fresh equation.
+    if (isFinite(equation[equation.length-1])){
         console.log("already a num");
         equation = [];
         aNumber = "";
@@ -13,13 +13,14 @@ function storeNum(number){
     aNumber += number;
     answerBox.textContent = aNumber;
 }
-
+// Evaluate equation and send results to the display on calculator
 function equalResult(){
-    console.log("Equation time!");
-    console.log(aNumber);
     equation.push(aNumber);
     aNumber = "";
     var result = eval(equation.join(""));
+    equation = [];
+    equation.push(result);
+    //console.log("Array should have one entry now " + equation);
     if (Number.isNaN(result)){
         result = "Error";    
     }
@@ -27,16 +28,15 @@ function equalResult(){
     console.log(result);
     return result;
 }
-
+// Add arithimetic operator to equation.
 function operation(mathoper){
     equation.push(aNumber);
     aNumber = "";
     if (equation[0]){
         equation.push(mathoper);
     }
-    
 }
-
+// Clears the memory of the calculator.
 function clearMem(){
     aNumber = "";
     operator = "";
