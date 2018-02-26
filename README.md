@@ -1,6 +1,6 @@
 ## javascriptCalc
 
-A calculator programmed in a javascript!
+A calculator programmed in a JavaScript!
 Hosted on https://codepen.io/Pherang/pen/WMgmJj (Until I get github pages running)
 
 * The C or backspace button doesn't work for now. Use AC to clear memory.
