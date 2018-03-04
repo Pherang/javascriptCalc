@@ -9,4 +9,4 @@ Hosted on https://codepen.io/Pherang/pen/WMgmJj (Until I get github pages runnin
 
 But it works!
 
-Opened a new branch to rewrite this because this branch uses _eval()._ Big no-no.
+(Fixed issue with using eval() by using math.eval() instead from mathjs.org) Thanks mathjs.org!
