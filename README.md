@@ -9,4 +9,4 @@ Hosted on https://codepen.io/Pherang/pen/WMgmJj (Until I get github pages runnin
 
 But it works!
 
-Opened a new branch to rewrite this because this branch uses eval(). Big no-no.
+Opened a new branch to rewrite this because this branch uses _eval()._ Big no-no.
