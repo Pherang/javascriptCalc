@@ -25,7 +25,7 @@ function storeNum(number){
 function equalResult(){
     equation.push(aNumber);
     aNumber = "";
-    var result = eval(equation.join(""));
+    var result = math.eval(equation.join(""));
     equation = [];
     equation.push(result);
     if (Number.isNaN(result)){
